@@ -17,10 +17,15 @@
 - [CSV](/csvs/aac_intakes.csv)  
 - [참고: Group by와 Having](http://www.gurubee.net/lecture/1032)  
 
-#### 005. [입양 시각 구하기](https://programmers.co.kr/learn/courses/30/lessons/59412)  
+#### 005. [입양 시각 구하기(1)](https://programmers.co.kr/learn/courses/30/lessons/59412)  
 - [SQL](/sqls/005.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
 - [참고: MySQL DateTime 포맷과 문자열 날짜값의 비교](https://apost.kr/483)  
+
+#### 006. [입양 시각 구하기(2)](https://programmers.co.kr/learn/courses/30/lessons/59413)  
+- [SQL](/sqls/006.sql)  
+- [CSV](/csvs/aac_intakes.csv)  
+- [참고: 재귀쿼리](https://allmana.tistory.com/4)  
 
 # 개념 정리  
 
