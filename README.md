@@ -25,7 +25,7 @@
 #### 006. [입양 시각 구하기(2)](https://programmers.co.kr/learn/courses/30/lessons/59413)  
 - [SQL](/sqls/006.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
-- [참고: 재귀쿼리](https://allmana.tistory.com/4)  
+- [참고: 재귀쿼리](https://github.com/yeoseon/tip-archive/issues/221)  
 
 # 개념 정리  
 
