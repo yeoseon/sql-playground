@@ -1,4 +1,7 @@
 -- 아직 풀지 못함
+-- 이렇게 하면 답은 도출 되지만, 입양이 없는 시간은 나타내지 못한다.
+-- 시간을 기준으로 전체를 순환하며 가져와야 한다.
+-- CTE와 재귀쿼리를 이용하여 해결할 수 있다. (다른 답 참고)
 select
 	date_format(datetime, '%H') as hour,
 	count(datetime)
@@ -15,8 +18,6 @@ SELECT h+1 FROM HOUR WHERE h<23)
 SELECT h AS HOUR, COALESCE(COUNT(ANIMAL_ID),0) AS COUNT
 FROM HOUR LEFT JOIN ANIMAL_OUTS ON HOUR.h = DATE_FORMAT(DATETIME, '%k')
 GROUP BY HOUR.h
-
-
 
 -- 다른 답 2
 WITH RECURSIVE OT AS
