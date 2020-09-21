@@ -27,10 +27,10 @@
 - [CSV](/csvs/aac_intakes.csv)  
 - [참고: 재귀쿼리](https://github.com/yeoseon/tip-archive/issues/221)  
 
-#### 007. [이름이 없는 동물의 아이디](https://programmers.co.kr/learn/courses/30/lessons/59039)  
+#### 007. [NULL 처리하기](https://programmers.co.kr/learn/courses/30/lessons/59410)  
 - [SQL](/sqls/007.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
-
+- [참고: Oracle - NVL](https://gent.tistory.com/189)  
 
 # 개념 정리  
 
