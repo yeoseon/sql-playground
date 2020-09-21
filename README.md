@@ -27,6 +27,8 @@
 - [CSV](/csvs/aac_intakes.csv)  
 - [참고: 재귀쿼리](https://github.com/yeoseon/tip-archive/issues/221)  
 
+
+
 # 개념 정리  
 
 ## Group by ... Having  
@@ -85,3 +87,7 @@ where date_format(datetime, '%H') < '20'
 GROUP by date_format(datetime, '%H')
 order by date_format(datetime, '%H');
 ```
+
+## CTE(Common Table Expression, 공통 테이블 식)  
+
+[나의 TIL 참고](https://github.com/yeoseon/tip-archive/issues/221)  
