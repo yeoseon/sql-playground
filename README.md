@@ -32,6 +32,10 @@
 - [CSV](/csvs/aac_intakes.csv)  
 - [참고: Oracle - NVL](https://gent.tistory.com/189)  
 
+#### 008. [없어진 기록 찾기](https://programmers.co.kr/learn/courses/30/lessons/59042)  
+- [SQL](/sqls/008.sql)  
+- [CSV](/csvs/aac_intakes.csv)  
+
 # 개념 정리  
 
 ## Group by ... Having  
