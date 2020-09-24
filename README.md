@@ -1,8 +1,4 @@
 # Index  
-#### 000. [다양한 단일행 함수 모음](https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql)  
-- 결과  
-![image](https://user-images.githubusercontent.com/54384004/94105154-a15ad480-fe73-11ea-8bbf-40e1d8f40553.png)
-
 #### 001. [중복 제거하기](https://programmers.co.kr/learn/courses/30/lessons/59408)  
 - [SQL](/sqls/001.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
@@ -105,3 +101,7 @@ order by date_format(datetime, '%H');
 ## CTE(Common Table Expression, 공통 테이블 식)  
 
 [나의 TIL 참고](https://github.com/yeoseon/tip-archive/issues/221)  
+
+## [다양한 단일행 함수 모음](https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql)  
+- 결과  
+![image](https://user-images.githubusercontent.com/54384004/94105154-a15ad480-fe73-11ea-8bbf-40e1d8f40553.png)
