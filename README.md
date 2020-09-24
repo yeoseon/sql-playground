@@ -104,12 +104,12 @@ order by date_format(datetime, '%H');
 
 ## 다양한 단일행 함수 모음  
 1. 문자 관련 단일행 함수
-    - [SQL]((https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql))  
+    - [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql)
     - 결과  
     ![image](https://user-images.githubusercontent.com/54384004/94105154-a15ad480-fe73-11ea-8bbf-40e1d8f40553.png)
     
 2. 숫자 관련 단일행 함수
-    - [SQL]((https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql))  
+    - [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql)
     - 결과  
     
     |round(112.3456,1)|round(112.3456,2)|round(112.3456,-1)|truncate(112.3456,1)|truncate(112.3456,2)|truncate(112.3456,-1)|mod(26,3)|mod(10,9)|mod(4,2)|ceil(12.6)|ceil(11.5)|ceil(16.3)|floor(12.6)|floor(11.5)|floor(16.3)|
@@ -117,7 +117,7 @@ order by date_format(datetime, '%H');
     |112.3|112.35|110|112.3|112.34|110|2|1|0|13|12|17|12|11|16|
 
 3. 날짜 관련 함수  
-    - [SQL]((https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql))  
+    - [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql)
     
     1) 현재 날짜, 시간 
         - 결과  
