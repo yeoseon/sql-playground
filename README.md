@@ -102,6 +102,46 @@ order by date_format(datetime, '%H');
 
 [나의 TIL 참고](https://github.com/yeoseon/tip-archive/issues/221)  
 
-## [다양한 단일행 함수 모음](https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql)  
-- 결과  
-![image](https://user-images.githubusercontent.com/54384004/94105154-a15ad480-fe73-11ea-8bbf-40e1d8f40553.png)
+## 다양한 단일행 함수 모음  
+1. 문자 관련 단일행 함수
+    - [SQL]((https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql))  
+    - 결과  
+    ![image](https://user-images.githubusercontent.com/54384004/94105154-a15ad480-fe73-11ea-8bbf-40e1d8f40553.png)
+    
+2. 숫자 관련 단일행 함수
+    - [SQL]((https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql))  
+    - 결과  
+    
+    |round(112.3456,1)|round(112.3456,2)|round(112.3456,-1)|truncate(112.3456,1)|truncate(112.3456,2)|truncate(112.3456,-1)|mod(26,3)|mod(10,9)|mod(4,2)|ceil(12.6)|ceil(11.5)|ceil(16.3)|floor(12.6)|floor(11.5)|floor(16.3)|
+    |-----------------|-----------------|------------------|--------------------|--------------------|---------------------|---------|---------|--------|----------|----------|----------|-----------|-----------|-----------|
+    |112.3|112.35|110|112.3|112.34|110|2|1|0|13|12|17|12|11|16|
+
+3. 날짜 관련 함수  
+    - [SQL]((https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql))  
+    
+    1) 현재 날짜, 시간 
+        - 결과  
+        ![image](https://user-images.githubusercontent.com/54384004/94107322-2ba53780-fe78-11ea-9db8-88b6bfdffc78.png)
+
+    2) 날짜나 시간에 따른 특정 정보  
+        - 결과
+        ![image](https://user-images.githubusercontent.com/54384004/94107705-fa793700-fe78-11ea-9e82-5e4510ed8b30.png)
+    3) 날짜, 시간 연산  
+        - 결과  
+        
+        |date_add('2020-12-31 23:59:59', INTERVAL 1 SECOND)|date_add('2020-12-31 23:59:59', interval 31 day)|date_add('2020-12-31 23:59:59', interval '1:1' MINUTE_SECOND)|date_add('2020-12-31 23:59:59', interval '-1 17' day_hour)|
+        |--------------------------------------------------|------------------------------------------------|-------------------------------------------------------------|----------------------------------------------------------|
+        |2021-01-01 00:00:00|2021-01-31 23:59:59|2021-01-01 00:01:00|2020-12-30 06:59:59|
+        
+    4) 시간/초 데이터 변환  
+        - 결과  
+        ![image](https://user-images.githubusercontent.com/54384004/94108198-d66a2580-fe79-11ea-9653-da46e9967d77.png)
+
+    5) period_add, period_diff  
+        - 결과  
+        ![image](https://user-images.githubusercontent.com/54384004/94108467-542e3100-fe7a-11ea-857b-247e26cf2e4a.png)
+       
+    6) date_format 함수  
+        - https://stricky.tistory.com/220 참고  
+
+    
