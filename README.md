@@ -1,4 +1,8 @@
 # Index  
+#### 000. [다양한 단일행 함수 모음]()  
+- 결과  
+![image](https://user-images.githubusercontent.com/54384004/94105154-a15ad480-fe73-11ea-8bbf-40e1d8f40553.png)
+
 #### 001. [중복 제거하기](https://programmers.co.kr/learn/courses/30/lessons/59408)  
 - [SQL](/sqls/001.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
