@@ -42,6 +42,10 @@
 - [SQL](/sqls/009.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
 
+#### 010. [오랜 기간 보호한 동물(1)](https://programmers.co.kr/learn/courses/30/lessons/59044)  
+- [SQL](/sqls/010.sql)  
+- [CSV](/csvs/aac_intakes.csv)  
+
 # 개념 정리  
 
 ## Group by ... Having  
