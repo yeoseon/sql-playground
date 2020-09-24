@@ -38,6 +38,9 @@
 - [참고: Join](https://doorbw.tistory.com/223)  
 ![image](https://user-images.githubusercontent.com/54384004/93741786-ff937780-fc27-11ea-94c7-ad34e8276f3e.png)
 
+#### 009. [있었는데요 없었습니다](https://programmers.co.kr/learn/courses/30/lessons/59043)  
+- [SQL](/sqls/009.sql)  
+- [CSV](/csvs/aac_intakes.csv)  
 
 # 개념 정리  
 
