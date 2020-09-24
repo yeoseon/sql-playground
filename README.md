@@ -1,5 +1,5 @@
 # Index  
-#### 000. [다양한 단일행 함수 모음]()  
+#### 000. [다양한 단일행 함수 모음](https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql)  
 - 결과  
 ![image](https://user-images.githubusercontent.com/54384004/94105154-a15ad480-fe73-11ea-8bbf-40e1d8f40553.png)
 
