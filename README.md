@@ -156,4 +156,57 @@ order by date_format(datetime, '%H');
     6) date_format 함수  
         - https://stricky.tistory.com/220 참고  
 
+4. 형 변환 함수  
+    - [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/%EB%8B%A8%EC%9D%BC%ED%96%89%20%ED%95%A8%EC%88%98%20%EB%AA%A8%EC%9D%8C.sql)
     
+    1) MySQL의 데이터 타입  
+        - https://stricky.tistory.com/232 참고  
+    
+    2) 묵시적 형변환  
+        - https://stricky.tistory.com/232 참고  
+        
+    3) CAST, CONVERT 함수  
+        - ```
+          CAST(표현할 값 AS 데이터 형식[(길이)]); 
+          CONVERT(표현할 값, 데이터 형식[(길이)]);
+          ```
+        - 결과  
+        ![image](https://user-images.githubusercontent.com/54384004/94396988-f4979480-019d-11eb-8ccf-467eb575e68f.png)
+        ![image](https://user-images.githubusercontent.com/54384004/94397449-d2eadd00-019e-11eb-9bb8-1d76645d86ef.png)
+
+5. 일반 함수  
+    1) ifnull
+    2) if(조건, 조건성립시 출력, 미성립시 출력)  
+    3) case
+    ```
+    select 
+        name,
+        case when dept = 'A' then '경영지원부' 
+             when dept = 'B' then '영업부' 
+             else '회계팀' end as dept,
+        salary,
+        bonus 
+    from class.salary;
+    ```
+    
+## 다양한 복수행 함수 (window, 그룹 함수)  
+
+복수행 함수 : 한번에 여러 데이터에 대한 결과를 출력하는 함수  
+복수행 함수는 컬럼 값에 null이 있다면, 제외하고 결과가 나온다.  
+따라서 null일 경우의 값을 세팅하고 작성해야 한다.  
+(5개 컬럼 중 2개가 null인데, 5개 컬럼의 avg를 구할 때, 3으로 나뉘어짐.)
+
+### 1. 많이 쓰이는 기본 함수
+
+1) count 함수  
+2) sum 함수  
+3) avg 함수  
+4) max, min 
+5) stddev
+    * 표준 편차를 구하는 함수  
+6) variance 
+    * 분산을 구하는 함수  
+7) group by 
+    * [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/groupby.sql)  
+    * 
+        

@@ -86,3 +86,24 @@ select
 
 -- 6) date_format 함수
 -- https://stricky.tistory.com/220 참고
+
+-- 4. 형 변환 함수 모음
+-- https://stricky.tistory.com/232 참고
+
+-- 1) cast 와 convert
+
+    -- int to char, char to int
+     select
+     	cast(100 as char) as num_to_char,
+     	cast('100' as unsigned) as char_to_num   -- as int 로 했다가 오류 발생함
+     from dual;
+
+     -- Character -> Datetime
+     select
+     	'2016-08-25 03:30:00',
+     	cast('2016-08-25 03:30:00' as datetime) as char_to_datetime
+     from dual;
+
+-- 5. 일반 함수 모음
+-- https://stricky.tistory.com/233
+
