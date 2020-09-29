@@ -50,6 +50,13 @@
 - [SQL](/sqls/011.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
 
+#### 012. [오랜기간 보호한 동물](https://programmers.co.kr/learn/courses/30/lessons/59411)  
+- [SQL](/sqls/012.sql)  
+- [CSV](/csvs/aac_intakes.csv)  
+
+#### 013. [DATETIME에서 DATE로 형변환](https://programmers.co.kr/learn/courses/30/lessons/59414)
+- [SQL](/sqls/013.sql)  
+- [CSV](/csvs/aac_intakes.csv)  
 
 # 개념 정리  
 
@@ -213,3 +220,4 @@ order by date_format(datetime, '%H');
 ## Join  
 
 * [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/join.sql)  
+
