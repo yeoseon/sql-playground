@@ -208,5 +208,8 @@ order by date_format(datetime, '%H');
     * 분산을 구하는 함수  
 7) group by 
     * [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/groupby.sql)  
-    * 
+
         
+## Join  
+
+* [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/join.sql)  
