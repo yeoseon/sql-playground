@@ -58,6 +58,9 @@
 - [SQL](/sqls/013.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
 
+#### 014. [코딩테스트 기출 문제(private)](https://www.notion.so/yyskr/2-e58508b1f59a460dbfe256c4ab2156d0)  
+- [SQL](/sqls/014.sql)  
+
 # 개념 정리  
 
 ## Group by ... Having  
@@ -216,8 +219,165 @@ order by date_format(datetime, '%H');
 7) group by 
     * [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/groupby.sql)  
 
-        
+ 
 ## Join  
 
 * [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/join.sql)  
 
+## where 1=1와 1=2  
+
+```aidl
+create table class.insert_test2 as select * from class.insert_test where 1=2;
+```
+
+* 1=2는 Schema만 복제 한다.  
+* 1=1는 데이터까지 모두 복제한다.  
+* delete 1=1로 하면 모두 삭제한다.  
+
+## insert into on duplicate key  
+
+* 대상 테이블에 해당 키에 해당하는 데이터가 없으면 insert 문을 통해 생성한다.  
+* 있으면 Update 한다.  
+```aidl
+insert into insert_test 
+select * 
+from insert_test2 b 
+on duplicate key update cont = b.cont,
+                        name = b.name, 
+                        tel_num = b.tel_num, 
+                        input_date = now();
+```
+
+## DDL - Delete, Truncate, Drop 비교
+
+### Delete  
+```aidl
+ [ WITH <common_table_expression> [ ,...n ] ]
+ DELETE [ TOP ( expression ) [ PERCENT ] ] [ FROM ] { <object> | rowset_function_limited  [ WITH ( <table_hint_limited> [ ...n ] ) ] }
+     [ <OUTPUT Clause> ]
+     [ FROM <table_source> [ ,...n ] ]
+     [ WHERE { <search_condition> | { [ CURRENT OF  { [ GLOBAL ] cursor_name }  | cursor_variable_name } ] } } ]
+     [ OPTION ( <Query Hint> [ ,...n ] ) ] [; ]
+ <object> ::=
+ { [ server_name.database_name.schema_name. | database_name. [ schema_name ] .  | schema_name. ] table_or_view_name }
+```
+- 데이터만 삭제된다.  
+- 테이블 용량은 줄지 않는다.  
+- 삭제한 것을 되돌릴 수 있다.  
+- Table이나 클러스터에 행이 많으면 행이 삭제될 때마다 많은 자원이 소모된다.  
+- Commit 전에는 Rollback이 가능하다.  
+- 전체 또는 일부만 삭제 가능  
+- 삭제 행수 반환  
+- 데이터를 모두 Delete해도 사용했던 Storage는 Release처리되지 않는다.  
+
+### Truncate - 테이블의 모든 로우를 제거한다.  
+- 테이블을 최초 생성된 초기 상태로 만든다.  
+- 용량이 줄어들고 인덱스 등도 모두 삭제 된다. (MySQL은 삭제되지 않음)  
+- AUTO_INCREMENT 등의 설정도 삭제된다.  
+- 무조건 전체 삭제만 가능하다.  
+- 삭제 행수를 반환하지 않는다. 
+- 테이블시 사용했던 Storage 중 최초 테이블 생성시 할당된 Storage를 제외하고 모두 Release 처리되어 복구 불가능하다.  
+- Dtop -> Create 순서로 처리된다.  
+
+### Drop - 테이블 구조를 제거한다.  
+- 기존 테이블의 존재 자체를 삭제한다.  
+- RollBack 불가능  
+- 테이블이 사용했던 모든 Storage가 Release처리된다.  
+
+## Data Dictionary  
+
+MySQL Server 내에 있는 데이터베이스 개체에 대한 정보가 모두 모아져 있는 곳  
+MySQL에는 4가지의 Data Dictionary가 있다.  
+
+* information_schema
+* mysql
+* sys
+    * 5.7 버전부터 기본 제공된다.  
+* performance_schema  
+    * 데이터베이스 내 성능 지표를 호가인 할 수 있는 스키마.  
+    
+자세한 내용은 (https://stricky.tistory.com/296) 참조  
+
+## 제약 조건  
+
+* DB 내 테이블에 정해둔 규칙에 따라 올바른 데이터만 입력받고, 규칙에 어긋나거나 잘못된 데이터는 입력 및 변경이 되지 않도록 하는 기능  
+* DDL에 포함하여 생성할 수 있고, 칼럼에 추후에 추가 및 변경도 가능하다.  
+
+
+### primary key  
+
+* 중복 방지
+* null 미허용 
+* 각 로우를 특정할 수 있는 식별자로 사용된다.  
+* Not Null + Unique
+
+```
+alter table schema_name.table_name 
+        add primary key (col1, col2, ....); 
+
+-- drop 
+alter table schema_name.table_name drop primary key;
+```
+
+### foreign key  
+
+어떤 테이블의 컬럼 값은 다른 테이블의 컬럼 값을 참조해야 한다.  
+```aidl
+alter table order 
+        add constraint order_customer_id_fk 
+                foreign key (customer_id) references customer (customer_id); 
+
+-- drop 
+alter table order drop key order_customer_id_fk;
+```
+
+### not null  
+
+```
+alter table schema_name.table_name modify col1 int not null;
+
+-- not null 해제
+alter table schema_name.table_name modify col1 int null;
+```
+
+### Unique  
+```
+alter table schema_name.table_name
+	add constraint table_pk
+		unique (col1, col2);
+        
+-- drop
+alter table schema_name.table_name drop key table_pk;
+```
+
+### check  
+
+어떤 컬럼의 값이 check 제약 조건으로 지정된 값 이외 다른 값이 들어오지 못하도록 하는 제약조건  
+코드성 컬럼이나 여부, 유무 등의 Y,N 값만 들어와야 하는 컬럼 등에 사용을 한다.  
+무결성을 보장한다.  
+```aidl
+ALTER TABLE schema_name.table_name
+	ADD CONSTRAINT CHK_PersonAge CHECK (col1 >=18);
+
+-- drop
+ALTER TABLE schema_name.table_name
+DROP CONSTRAINT CHK_PersonAge;
+```
+
+### default
+특별한 값을 입력하지 않아도 미리 지정한 값이 기본적으로 들어감  
+
+```aidl
+alter table customer alter column name set default 'N';
+
+-- drop
+alter table customer alter column name drop default;
+```
+
+## 인덱스  
+
+https://github.com/yeoseon/tip-archive/issues/61 참고  
+
+## 뷰  
+
+https://github.com/yeoseon/tip-archive/issues/258 참고  
