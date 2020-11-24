@@ -58,8 +58,11 @@
 - [SQL](/sqls/013.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
 
-#### 014. [코딩테스트 기출 문제(private)](https://www.notion.so/yyskr/2-e58508b1f59a460dbfe256c4ab2156d0)  
+#### 014. [기출 문제(private)](https://www.notion.so/yyskr/2-e58508b1f59a460dbfe256c4ab2156d0)  
 - [SQL](/sqls/014.sql)  
+
+#### 014. [기출 문제(private)](https://www.notion.so/yyskr/2020-10-10-6b097d114d924efe982c814e7ccb69d7)  
+- [SQL](/sqls/015.sql)  
 
 # 개념 정리  
 

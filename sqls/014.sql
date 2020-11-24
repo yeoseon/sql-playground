@@ -33,5 +33,5 @@ GROUP by a.experience
 order by exp desc;
 
 -- 추가 고민
--- 1. if(sql_ is null, 100, sql_) + if(algo is null, 100, algo) + if(bug_fixing is null, 100, bug_fixing)가 중복 사용된다. CTE?를 이용해서 만들 수 있을 듯 하다.
+-- 1. if(sql_ is null, 100, sql_) + if(algo is null, 100, algo) + if(bug_fixing is null, 100, bug_fixing)가 여러번 사용되는 구문이라 불편하다. 이를 줄이거나, 변수로 묶어서 한번에 사용할 수 있는 방법이 있을까?
 -- 2. 컬럼이 3개가 아닌 4개면 최대 점수는 400이 되는데.. 이런 것에 대해 유연한 SQL이면 좋겠다.
