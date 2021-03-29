@@ -36,7 +36,7 @@
 - [SQL](/sqls/008.sql)  
 - [CSV](/csvs/aac_intakes.csv)  
 - [참고: Join](https://doorbw.tistory.com/223)  
-![image](https://user-images.githubusercontent.com/54384004/93741786-ff937780-fc27-11ea-94c7-ad34e8276f3e.png)
+  ![image](https://user-images.githubusercontent.com/54384004/112798283-a6f5d900-90a7-11eb-818a-93e9f76306cd.png)
 
 #### 009. [있었는데요 없었습니다](https://programmers.co.kr/learn/courses/30/lessons/59043)  
 - [SQL](/sqls/009.sql)  
@@ -224,6 +224,8 @@ order by date_format(datetime, '%H');
 
  
 ## Join  
+
+![image](https://user-images.githubusercontent.com/54384004/112798283-a6f5d900-90a7-11eb-818a-93e9f76306cd.png)
 
 * [SQL](https://github.com/yeoseon/sql-playground/blob/master/sqls/join.sql)  
 
