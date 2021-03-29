@@ -386,3 +386,12 @@ https://github.com/yeoseon/tip-archive/issues/61 참고
 ## 뷰  
 
 https://github.com/yeoseon/tip-archive/issues/258 참고  
+
+# 다양한 쿼리 방식  
+
+## 1. select * from (select ...)  
+
+가공한 데이터를 이용해 무언가를(또 가공하거나, 연산하거나..) 해야할 때에는 하나의 select 내에서 모두 해결하기 보다는 
+가공한 데이터만을 select 하고, 그 결과에서 다시 select 하는 방법을 사용하자.  
+
+[예시 참고](/sqls/016.sql)  
