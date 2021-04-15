@@ -96,6 +96,17 @@ having count(name) > 1
 order by name asc;
 ```
 
+### 예시 (월별 Count)
+```
+select 
+    SUBSTR(tx_dt, 1, 6),
+    count(tx_dt)
+from table
+group by SUBSTR(tx_dt, 1, 6)
+having count(tx_dt) > 1
+order by SUBSTR(TX_DT, 1, 6);
+```
+
 ## DateTime 포맷과 문자열 날짜 값의 비교
 
 ### 1. 문자열 -> 날짜 
